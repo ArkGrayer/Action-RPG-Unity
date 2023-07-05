@@ -11,14 +11,16 @@ public class SlimeEnemy : MonoBehaviour {
     public DetectionZone detectionZone;
     Rigidbody2D rb;
 
+    DamageableCharacter damageableCharacter;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
-        // detectionZone = GetComponent<DetectionZone>();
+        damageableCharacter = GetComponent<DamageableCharacter>();
     }
 
     void FixedUpdate() {
 
-        if (detectionZone != null && detectionZone.detectedObjs.Count > 0) {
+        if (damageableCharacter.Targetable && detectionZone != null && detectionZone.detectedObjs.Count > 0) {
 
             Vector2 direction = (detectionZone.detectedObjs[0].transform.position - transform.position).normalized;
 

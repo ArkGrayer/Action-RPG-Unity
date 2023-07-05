@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79823e5a42a53ea459777aac92decd16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthText: {fileID: 8494960555156121294, guid: 7a15f7ff22cdb514395c85500ed2f5cf, type: 3}
   disableSimulation: 0
   _health: 3
   _targetable: 1
